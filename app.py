@@ -15,10 +15,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 def main():
-    with st.sidebar:
-        selected = option_menu("Main Menu", ["Home", 'Settings'], 
-        icons=['house', 'gear'], menu_icon="cast", default_index=0)
-    
     client = MongoClient("mongodb://localhost:27017")
     db = client["CONNECT-X"]
     collection = db["test"]
